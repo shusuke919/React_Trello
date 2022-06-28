@@ -1,12 +1,9 @@
 import React from 'react'
 
-const AddTaskCardButton = () => {
+export default function TaskCardDeleteButton() {
   return (
     <div>
       
     </div>
   )
 }
-
-export default AddTaskCardButton
-
