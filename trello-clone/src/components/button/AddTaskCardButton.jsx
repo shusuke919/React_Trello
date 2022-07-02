@@ -1,9 +1,14 @@
 import React from 'react'
-
-const AddTaskCardButton = () => {
+import{v4 as uuid} from "uuid";
+const AddTaskCardButton = ({taskCardsList, setTaskCardsList}) => {
+  const addTaskCard = () => {
+    const taskCardId = uuid();
+    // タスクカードを追加する
+    setTaskCardsList([...taskCardsList, {id: taskCardId,draggabeleId: `item${taskCardId}`},])
+  };
   return (
-    <div>
-      
+    <div className="addTaskCardButtonArea">
+      <button className="addTaskCardButton" onClick={addTaskCard}>+</button>
     </div>
   )
 }
